@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quanticdata-bestbuy-scraper"
+version = "0.1.0"
+description = "Best Buy web scraper for Python and the command line: Best Buy's own current price for a list of SKUs or product URLs, with regular price, sale flag, stock status, seller, UPC, model and category, as JSON or CSV. Free and open source; sign in with your QuanticData account, no proxies or headless browser to run."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "QuanticData", email = "hello@quanticdata.io" }]
+keywords = ["best-buy-scraper", "bestbuy-scraper", "best-buy-web-scraper", "bestbuy-api", "best-buy-api", "bestbuy", "best-buy", "product-data", "price-tracker", "price-monitoring", "upc", "ecommerce"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.3"]
+
+[project.scripts]
+bestbuy-scraper = "quanticdata_bestbuy_scraper.__main__:run"
+
+[project.urls]
+Homepage = "https://quanticdata.io/collectors/?utm_source=github&utm_medium=pypi&utm_campaign=bestbuy-scraper"
+Documentation = "https://quanticdata.io/docs/"
+Source = "https://github.com/quantumproxies/bestbuy-scraper"
+Issues = "https://github.com/quantumproxies/bestbuy-scraper/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"quanticdata_bestbuy_scraper" = ["spec.json", "py.typed"]

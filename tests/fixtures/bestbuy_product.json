@@ -1,0 +1,47 @@
+{
+ "run_id": "cmvkshp4e0u8741o5zen0mxfs",
+ "slug": "bestbuy_product",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "products": [
+   "6579457"
+  ],
+  "max_results": 1
+ },
+ "count": 1,
+ "partial": false,
+ "finished_at": "2026-10-23T09:50:45.103Z",
+ "results": [
+  {
+   "upc": "846042088510",
+   "url": "https://www.bestbuy.com/site/6579457.p?skuId=6579457",
+   "brand": "TCL",
+   "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/1b524759-8f06-4397-b44d-7dd6feb22f3e.jpg",
+   "model": "55Q651G",
+   "price": "$319.99",
+   "title": "TCL - 55\" Class Q6-Series 4K UHD QLED Smart Google TV (2024)",
+   "rating": 4.7,
+   "seller": "Best Buy",
+   "on_sale": false,
+   "currency": "USD",
+   "retailer": "bestbuy",
+   "condition": "new",
+   "categories": [
+    "TV & Home Theater",
+    "TVs",
+    "All Flat-Screen TVs"
+   ],
+   "checked_at": "2026-10-23T09:50:45.102Z",
+   "product_id": "6579457",
+   "price_value": 319.99,
+   "seller_type": "retailer",
+   "availability": "in_stock",
+   "price_source": "bestbuy:productBySkuId.price.customerPrice",
+   "reviews_count": 986,
+   "availability_detail": "ADD_TO_CART",
+   "regular_price_value": 319.99
+  }
+ ],
+ "_note": "Real run of 2026-10-23 on the SKU of the collector's catalog example; the row is exactly as delivered."
+}

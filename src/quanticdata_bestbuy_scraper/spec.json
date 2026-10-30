@@ -1,0 +1,53 @@
+{
+ "cli": "bestbuy-scraper",
+ "name": "Best Buy Web Scraper",
+ "version": "0.1.0",
+ "description": "Best Buy web scraper for Python and the command line: Best Buy's own current price for a list of SKUs or product URLs, with regular price, sale flag, stock status, seller, UPC, model and category, as JSON or CSV. Free and open source; sign in with your QuanticData account, no proxies or headless browser to run.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/bestbuy-scraper",
+  "page": "https://quanticdata.io/collectors/?utm_source=github&utm_medium=cli&utm_campaign=bestbuy-scraper",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=bestbuy-scraper",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=bestbuy-scraper"
+ },
+ "commands": [
+  {
+   "name": "product",
+   "collector": "bestbuy_product",
+   "method": "product",
+   "help": "Best Buy's current price, stock and seller for SKUs",
+   "description": "Best Buy's own current price for a list of SKUs — regular price, stock, seller, UPC.",
+   "positional": "products",
+   "positional_is_list": true,
+   "positional_optional": false,
+   "columns": [
+    "product_id",
+    "title",
+    "price",
+    "regular_price_value",
+    "on_sale",
+    "availability",
+    "model"
+   ],
+   "sample": "bestbuy_product",
+   "inputs": [
+    {
+     "name": "products",
+     "type": "string[]",
+     "required": true,
+     "description": "Best Buy product URLs or SKUs (one per line).",
+     "arg": "products"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many products to deliver at most (1–50). You pay only for delivered products.",
+     "min": 1,
+     "max": 50,
+     "default": 10,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}
